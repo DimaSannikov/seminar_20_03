@@ -63,7 +63,14 @@ int[,] matrix = CreateArray(rows, columns);
 
 PrintArray(matrix);
 Console.WriteLine();
-// PrintArray(MoveFirstLastRows(matrix));
 
-TransparentMatrix(matrix);
-PrintArray(matrix);
+try
+{
+    TransparentMatrix(matrix);
+    PrintArray(matrix);
+}
+catch (System.Exception)
+{
+    Console.WriteLine("Невозможно транспонировать данную таблицу");
+    Console.WriteLine();
+}
